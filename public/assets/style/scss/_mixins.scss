@@ -1,0 +1,30 @@
+@mixin flex_center_vertically(){
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_center_vertically_horizontally(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex_column(){
+  @include flex_center_vertically_horizontally;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin box-shadow($x, $y, $blur, $color: black){
+  -moz-box-shadow: $x $y $y $x $color;
+  -webkit-box-shadow: $x $y $y $x $color;
+  -o-box-shadow: $x $y $y $x $color;
+  box-shadow: $x $y $y $x $color;
+}
+
+@mixin background_image($url : ''){
+  background: url($url);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

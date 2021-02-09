@@ -1,0 +1,24 @@
+@font-face {
+  src: url("../../fonts/wild Zova/Wild Zova Free.ttf") format("truetype"),
+        url("../../fonts/wild Zova/Wild Zova Free.otf") format("opentype");
+  font-family: "Wild Zova";
+}
+
+$wildZova : "Wild Zova" !default;
+
+// colors
+
+$blue : #3980f2 !default;
+$lightBlue : #51c1f3 !default;
+$green : #98de61 !default;
+$orange : #ffc744 !default;
+$corail : #fa7169 !default;
+$darkGrey : #40515b !default;
+
+// gradients
+
+$violet_blue_gradient : linear-gradient(90deg, rgba(207,103,240,1) 0%, rgba(130,187,244,1) 100%);
+$orange_pink_gradient : linear-gradient(90deg, #f1d955 0%,#ff5dc3 100%);
+$violet_pink_gradient : linear-gradient(90deg, rgba(207,103,240,1) 0%, #ff5dc3 100%);
+$green_gradient : linear-gradient(90deg, #77fcab, #c4f188 100%);
+$blue_green_gradient : linear-gradient(90deg, $blue 0%, $green 100%);

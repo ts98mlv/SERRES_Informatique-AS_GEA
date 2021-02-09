@@ -1,0 +1,140 @@
+@import "variables";
+@import "mixins";
+
+header.navbar{
+  @include flex_center_vertically;
+  @include box-shadow(0px, 5px, 5px, $darkGrey);
+  justify-content: space-between;
+  padding: 0 25px;
+  min-height: 150px;
+  min-width: 100%;
+  max-width: 100%;
+
+  /* bouton d'ouverture du menu */
+
+  button#menuButton{
+    padding: 5px 10px;
+    //border: 1px solid $darkGrey;
+    //color: $darkGrey;
+    border-radius: 5px;
+    @include flex_center_vertically_horizontally;
+    @include box-shadow(1px, 1px, 3px, $darkGrey);
+
+    & > span.material-icons {
+      margin-right: 10px;
+    }
+  }
+
+  // colorisation v1
+/*  button#menuButton{
+    border: 1px solid $blue;
+    background: none;
+    color: $blue;
+  }*/
+
+  // colorisation v2
+/*  button#menuButton{
+    border: 1px solid $darkGrey;
+    background: none;
+    color: $darkGrey;
+  }*/
+
+  // colorisation v3
+/*  button#menuButton{
+    border: 1px solid $corail;
+    background: none;
+    color: $corail;
+    @include box-shadow(1px, 1px, 3px, darken($corail, 35));
+  }*/
+
+
+  // colorisation v4
+    button#menuButton{
+      background: $blue;
+      color: white;
+      border : none;
+      @include box-shadow(1px, 1px, 3px, darken($blue, 35));
+      border-radius: 0;
+    }
+
+  /* logo */
+
+  #logo{
+    min-width: 75px;
+    max-width: 75px;
+    max-height: 50px;
+    min-height: 50px;
+    border-radius: 5px;
+
+    @include background_image("../../img/LOGO_FINAL.PNG");
+  }
+
+  /* menus de navigation */
+  #menus{
+    display: none;
+
+    /* bouton de fermeture */
+    #closeMenus{
+      padding: 20px 10px;
+      color : lightgray;
+      position: absolute;
+      top: 0px;
+      right: 25px;
+      text-shadow: 2px 2px 4px darken($blue, 35);
+      font-family: $wildZova;
+      font-size: 24px;
+      z-index: 101;
+      border: none;
+      background: none;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    nav{
+      @include flex_column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80%;
+      height: 100%;
+      z-index: 100;
+      background: $blue;
+
+
+      /* menus */
+      & > ul {
+        min-width: 100%;
+        min-height: 60%;
+        margin-top: 40%;
+        padding-left: 0;
+      }
+      & > ul > li{
+        @include flex_center_vertically_horizontally;
+        @include box-shadow(0px, 1px, 3px, darken($blue, 35));
+        font-family: $wildZova;
+        list-style-type: none;
+        min-width: 100%;
+        margin-bottom: 40px;
+        padding: 10px 0;
+
+
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color : white;
+          @include flex_center_vertically_horizontally;
+          word-spacing: 10px;
+
+          span.material-icons{
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
