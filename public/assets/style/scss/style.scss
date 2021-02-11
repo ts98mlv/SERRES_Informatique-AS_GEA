@@ -6,8 +6,33 @@ html, body{
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0;
+  background: $lightGrey;
 }
 
 *{
   box-sizing: border-box;
+}
+
+a, p, h2, h3, h4, h5, h6, li, i{
+  font-family: $natureSpirit;
+}
+
+.btn-orange{
+  @include button($orange, white);
+}
+
+.btn-corail{
+  @include button($corail, white);
+}
+
+.btn-gradient_blue_green{
+  @include button_gradient($blue_green_gradient, white);
+}
+
+.btn-bleu{
+  @include button($blue, white);
+}
+
+.btn{
+  @include button;
 }

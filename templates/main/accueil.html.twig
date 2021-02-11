@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AS GEA - Page d'accueil{% endblock %}
+
+{% block body %}
+
+    <div id="accueil_landing">
+        <div id="content">
+            <h1>Année Spéciale GEA</h1>
+            <h2>
+                Vous avez déjà un parcours universitaire et vous êtes intéressés par les domaines de l'économie,
+                de la comptabilité ou de la gestion ? Alors le DUT GEA en année spéciale est peut être fait pour vous !
+            </h2>
+            <div class="callToAction">
+                <a class="btn-orange" href="">
+                    <span class="button_text">
+                        EN SAVOIR +
+                    </span>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </a>
+                <a class="btn-corail" href="">
+                    <span class="button_text">
+                        CONTACTER UN ÉTUDIANT
+                    </span>
+                    <span class="material-icons">
+                        email
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/style/css/accueil.min.css') }}">
+{% endblock %}

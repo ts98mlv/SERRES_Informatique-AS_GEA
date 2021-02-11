@@ -9,6 +9,10 @@ header.navbar{
   min-height: 150px;
   min-width: 100%;
   max-width: 100%;
+  background: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 
   /* bouton d'ouverture du menu */
 
@@ -81,7 +85,7 @@ header.navbar{
       top: 0px;
       right: 25px;
       text-shadow: 2px 2px 4px darken($blue, 35);
-      font-family: $wildZova;
+      font-family: $wildZova !important;
       font-size: 24px;
       z-index: 101;
       border: none;
@@ -98,7 +102,7 @@ header.navbar{
       right: 0;
       top: 0;
       width: 80%;
-      height: 100%;
+      height: 100vh;
       z-index: 100;
       background: $blue;
 
@@ -113,7 +117,7 @@ header.navbar{
       & > ul > li{
         @include flex_center_vertically_horizontally;
         @include box-shadow(0px, 1px, 3px, darken($blue, 35));
-        font-family: $wildZova;
+        font-family: $wildZova !important;
         list-style-type: none;
         min-width: 100%;
         margin-bottom: 40px;

@@ -28,3 +28,72 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+@mixin background_image_cover($url : ''){
+  background: url($url);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin button_base($bg : white, $color : black){
+  @include flex_center_vertically_horizontally;
+  @include box-shadow(1px, 1px, 2px, $darkGrey);
+  background: $bg;
+  color: $color;
+  border-radius: 5px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all .5s cubic-bezier(0.310, -0.105, 0.430, 1.400);
+  width: 100%;
+
+  $fontSize : 18px;
+  padding: $fontSize 0;
+
+  & > span.button_text{
+    flex-basis: 80%;
+    @include flex_center_vertically_horizontally;
+    font-size: $fontSize;
+  }
+
+  & > .material-icons{
+    flex-basis: 20%;
+    @include flex_center_vertically_horizontally;
+    font-size: $fontSize*1.5;
+  }
+
+  &:hover{
+    background: $green;
+    color: white;
+    padding: 10px;
+
+    & > span.button_text{
+      flex-basis: 0;
+      width: 0;
+      display: none;
+    }
+
+    & > .material-icons{
+      flex-basis: 100%;
+      width: 100%;
+      border-left: none;
+      font-size: $fontSize*2;
+    }
+  }
+}
+
+@mixin button_gradient($bg : white, $color : black){
+  @include button_base($bg, $color);
+
+  & > .material-icons{
+    border-left: 1px solid black;
+  }
+}
+
+@mixin button($bg : white, $color : black){
+  @include button_base($bg, $color);
+
+  & > .material-icons{
+    border-left: 1px solid darken($bg, 35);
+  }
+}

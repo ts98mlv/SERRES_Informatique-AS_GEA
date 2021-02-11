@@ -4,7 +4,13 @@
   font-family: "Wild Zova";
 }
 
+@font-face {
+  src: url("../../fonts/NatureSpiritRegular.otf") format("opentype");
+  font-family: "Nature Spirit";
+}
+
 $wildZova : "Wild Zova" !default;
+$natureSpirit : "Nature Spirit" !default;
 
 // colors
 
@@ -14,6 +20,7 @@ $green : #98de61 !default;
 $orange : #ffc744 !default;
 $corail : #fa7169 !default;
 $darkGrey : #40515b !default;
+$lightGrey: #f4f4f4 !default;
 
 // gradients
 
