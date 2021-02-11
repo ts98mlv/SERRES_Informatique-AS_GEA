@@ -14,17 +14,21 @@
     </head>
     <body>
         <header class="navbar">
-            <div title="Logo de l'AS GEA" alt="Logo de l'AS GEA" id="logo"></div>
+            <a title="Logo de l'AS GEA" alt="Logo de l'AS GEA" id="logo" href="{{ path('HomePage') }}"></a>
 
-            <button id="menuButton">
-            <span class="material-icons">
-                menu
-            </span>
-                MENU
+            <button id="menuButton" class="btn-bleu">
+                <span class="button_text">
+                    MENU
+                </span>
+                <span class="material-icons">
+                    menu
+                </span>
             </button>
+
 
             <div id="menus">
                 <button id="closeMenus">X</button>
+                <div id="logoNav"></div>
                 <nav>
                     <ul>
                         <li>

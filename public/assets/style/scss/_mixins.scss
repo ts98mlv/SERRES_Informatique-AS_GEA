@@ -44,8 +44,9 @@
   border-radius: 5px;
   text-decoration: none;
   overflow: hidden;
-  transition: all .5s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-  //width: 100%;
+  border: none;
+  transition: all .3s cubic-bezier(0.310, -0.105, 0.430, 1.400);
+  min-width: 150px;
 
   $fontSize : 18px !default;
   $padding_intern: 15px;

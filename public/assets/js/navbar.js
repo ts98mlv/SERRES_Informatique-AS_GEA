@@ -2,6 +2,7 @@ $(document).ready(() => {
 
     /* ouvre le menu */
     $("#menuButton").click(function (){
+        // $(this).preventDefault();
         $(this).hide();
         $("#menus").fadeIn("slow");
     })

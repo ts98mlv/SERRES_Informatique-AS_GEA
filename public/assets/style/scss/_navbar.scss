@@ -53,24 +53,31 @@ header.navbar{
 
 
   // colorisation v4
-    button#menuButton{
+/*    button#menuButton{
       background: $blue;
       color: white;
       border : none;
       @include box-shadow(1px, 1px, 3px, darken($blue, 35));
       border-radius: 0;
-    }
+    }*/
 
   /* logo */
 
   #logo{
-    min-width: 75px;
-    max-width: 75px;
-    max-height: 50px;
-    min-height: 50px;
+    $width: 100px;
+    $height: 80px;
+    min-width: $width;
+    max-width: $width;
+    max-height: $height;
+    min-height: $height;
     border-radius: 5px;
+    background-color: $darkGrey !important;
 
-    @include background_image("../../img/LOGO_FINAL.PNG");
+    @include background_image_cover("../../img/logo_transparent.png");
+
+    &:hover{
+      background-color: $blue !important;
+    }
   }
 
   /* menus de navigation */
@@ -96,6 +103,18 @@ header.navbar{
       }
     }
 
+    /* logo dans le burger menu */
+    div#logoNav{
+      @include background_image_cover("../../img/logo_transparent.png");
+      position: relative;
+      top: 0;
+      right: 40vw;
+      min-width: 30vw;
+      min-height: 15vh;
+      z-index: 101;
+    }
+
+    /* menus de navigation */
     nav{
       @include flex_column;
       position: absolute;
@@ -104,7 +123,7 @@ header.navbar{
       width: 80%;
       height: 100vh;
       z-index: 100;
-      background: $blue;
+      background: lighten($blue, 15);
 
 
       /* menus */
@@ -122,6 +141,7 @@ header.navbar{
         min-width: 100%;
         margin-bottom: 40px;
         padding: 10px 0;
+        background-color: $blue;
 
 
         &:last-of-type{
@@ -171,6 +191,11 @@ header.navbar{
       width: auto;
       margin-right: 40px;
 
+      /* logo dans le burger menu */
+      div#logoNav{
+        display: none;
+      }
+
       nav{
         flex-direction: row !important;
         position: relative;
@@ -199,6 +224,7 @@ header.navbar{
             padding-left: 15px;
             padding-right: 25px;
             transition: background .5s linear;
+            background: none;
 
             &:first-of-type{
               margin-left: 0;
