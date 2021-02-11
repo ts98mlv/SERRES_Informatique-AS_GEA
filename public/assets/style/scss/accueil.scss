@@ -47,6 +47,57 @@ div#accueil_landing{
   }
 }
 
+/* subjet index */
+section#recherche{
+  min-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 45px;
+
+  h2{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  #optionsRecherche{
+    @include flex_column;
+
+    /* div contenuFormation and etudiants*/
+    & > div{
+      width: 100%;
+      display: block;
+      margin-top: 45px;
+
+      &:first-of-type{
+        margin-top: 0;
+      }
+
+     h3{
+        margin-left: 10%;
+        font-size: 22px;
+        color: $blue;
+      }
+
+      /* blocks of buttons */
+      .actions{
+        display: block;
+        margin-top: 25px;
+
+
+        a[class^="btn"]{
+          margin-bottom: 15px;
+          max-width: 80%;
+          margin-left: 10%;
+
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* _____________________________________________________________________________________________________________________
 
