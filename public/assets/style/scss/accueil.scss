@@ -59,5 +59,11 @@ ________________________________________________________________________________
       background-position: center bottom !important;
       min-height: calc(100vh - 170px);
       margin-top: 125px;
+
+      #content{
+        h1{
+          font-size: 52px;
+        }
+      }
     }
 }

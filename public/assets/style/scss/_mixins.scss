@@ -45,27 +45,31 @@
   text-decoration: none;
   overflow: hidden;
   transition: all .5s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-  width: 100%;
+  //width: 100%;
 
-  $fontSize : 18px;
-  padding: $fontSize 0;
+  $fontSize : 18px !default;
+  $padding_intern: 15px;
+  padding: $padding_intern;
+  padding-left: $padding_intern*2;
 
   & > span.button_text{
     flex-basis: 80%;
     @include flex_center_vertically_horizontally;
     font-size: $fontSize;
+    padding-right: $padding_intern;
   }
 
   & > .material-icons{
     flex-basis: 20%;
     @include flex_center_vertically_horizontally;
     font-size: $fontSize*1.5;
+    padding-left: $padding_intern;
   }
 
   &:hover{
     background: $green;
     color: white;
-    padding: 10px;
+    padding: $padding_intern;
 
     & > span.button_text{
       flex-basis: 0;
@@ -78,6 +82,24 @@
       width: 100%;
       border-left: none;
       font-size: $fontSize*2;
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+      $fontSize : 25px;
+      & > span.button_text{
+        font-size: $fontSize;
+      }
+
+      & > .material-icons{
+        font-size: $fontSize*1.5;
+      }
+
+    &:hover{
+        & > .material-icons{
+          font-size: $fontSize*2;
+        }
     }
   }
 }
