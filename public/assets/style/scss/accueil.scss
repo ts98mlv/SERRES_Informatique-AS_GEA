@@ -150,5 +150,16 @@ ________________________________________________________________________________
       }
     }
 
+    /* subjet index */
+    section#recherche{
+      #optionsRecherche{
+        flex-direction: row;
+        align-items: flex-start;
 
+        & > div{
+          max-width: 50%;
+          margin-top: 0 !important;
+        }
+      }
+    }
 }
