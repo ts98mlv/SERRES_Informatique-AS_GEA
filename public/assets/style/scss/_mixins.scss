@@ -71,6 +71,7 @@
     background: $green;
     color: white;
     padding: $padding_intern;
+    cursor: pointer;
 
     & > span.button_text{
       flex-basis: 0;
