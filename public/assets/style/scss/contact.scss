@@ -95,3 +95,42 @@ div#contactPage{
 
   }
 }
+
+
+/* _____________________________________________________________________________________________________________________
+
+                                                      media queries
+
+_____________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 1300px){
+  div#contactPage{
+
+    #contactBox{
+      flex-direction: row;
+      min-height: 65vh;
+
+      #illustration, #saisie{
+        min-height: 65vh;
+      }
+
+      #illustration{
+        max-width: 40%;
+        min-width: 40%;
+        border-radius: 5px 0 0 5px;
+
+        .logo{
+          background-size: contain;
+          min-width: 60vw;
+          min-height: 40vh;
+        }
+      }
+
+      #saisie{
+        max-width: 60%;
+        min-width: 60%;
+        @include flex_center_vertically_horizontally;
+      }
+    }
+  }
+}
