@@ -36,3 +36,21 @@ a, p, h2, h3, h4, h5, h6, li, i{
 .btn{
   @include button;
 }
+
+// div qui gère le contenu dans le body pour toutes les pages
+div.page_content{
+  margin-top: 150px;
+}
+
+
+/* _____________________________________________________________________________________________________________________
+
+                                                      media queries
+
+_____________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 1300px){
+  div.page_content{
+    margin-top: 125px;
+  }
+}

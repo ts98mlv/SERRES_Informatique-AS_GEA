@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixins";
+
+div#contactPage{
+
+  h1{
+    text-align: center;
+  }
+
+//  box with contact form and illustration
+  #contactBox{
+    @include flex_column;
+    @include box-shadow(1px, 1px, 2px, $darkGrey);
+    min-width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 45px;
+
+    /* illustration */
+    #illustration{
+      min-width: 100%;
+      min-height: 30vh;
+      background-color: $blue;
+      @include flex_center_vertically_horizontally;
+      border-radius: 5px;
+
+      .logo{
+        @include background_image_cover("../../img/logo_transparent.png");
+        min-width: 50vw;
+        min-height: 25vh;
+      }
+    }
+
+    /* form */
+    #saisie{
+      min-width: 100%;
+      padding: 35px 0;
+      background: white;
+      border-radius: 0 0 5px 5px;
+
+      form{
+        max-width: 90%;
+        min-width: 90%;
+        margin: 0 auto;
+
+        fieldset{
+          border: none;
+          margin-bottom: 15px;
+
+          label, input:not([type="submit"]){
+            font-family: $natureSpirit;
+            font-size: 22px;
+          }
+
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+
+          div{
+            @include flex_column;
+            align-items: flex-start;
+
+            label{
+              margin-bottom: 10px;
+            }
+
+            input:not([type="submit"]), textarea{
+              border-radius: 0;
+              background: none;
+              color: $darkGrey;
+              border: none;
+              border-bottom: 1px solid $darkGrey;
+              width: 100%;
+              transition: all .3s ease-in;
+              min-height: 40px;
+
+              &:focus, &:active{
+                border: none !important;
+                background-color: $lightGrey;
+                border-bottom: 1px solid $blue !important;
+                border-radius: 0;
+                color: $blue;
+              }
+            }
+          }
+        }
+
+        button[type="submit"]{
+          margin-top: 25px;
+          float: right;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,54 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div id="contactPage">
+        <h1> Ici vous allez pouvoir contacter un étudiant d'AS GEA ! </h1>
+
+        <div id="contactBox">
+            <div id="illustration">
+                <div class="logo"></div>
+            </div>
+
+            <div id="saisie">
+                {{ form_start(contactForm)}}
+
+                <fieldset id="contact-nom">
+                    {{ form_row(contactForm.nom) }}
+                </fieldset>
+
+
+                <fieldset id="contact-prenom">
+                    {{ form_row(contactForm.prenom) }}
+                </fieldset>
+
+
+                <fieldset id="contact-email">
+                    {{ form_row(contactForm.email) }}
+                </fieldset>
+
+
+                <fieldset id="contact-message">
+                    {{ form_row(contactForm.message) }}
+                </fieldset>
+
+                <button type="submit" class="btn-bleu">
+                    <span class="button_text">
+                        ENVOYER
+                    </span>
+                    <span class="material-icons">
+                        send
+                    </span>
+                </button>
+
+                {{ form_end(contactForm) }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/style/css/contact.min.css') }}">
+{% endblock %}
