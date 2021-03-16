@@ -33,16 +33,23 @@ class MainController extends AbstractController
             ->add("message", TextareaType::class)
             ->getForm()
         ;
-//
-//        $contactForm->handleRequest($request);
-//
-//        //traitement du formulaire après soumission
-//        if ($contactForm->isSubmitted() && $contactForm->isValid()) {
-//            $data = $contactForm->getData();
-//        }
+
+        $contactForm->handleRequest($request);
+
+        //traitement du formulaire après soumission
+        if ($contactForm->isSubmitted() && $contactForm->isValid()) {
+            $data = $contactForm->getData();
+        }
 
         return $this->render("main/contact.html.twig", [
             "contactForm" => $contactForm->createView()
         ]);
+    }
+
+    /**
+     * @Route ("/formation", name="formation")
+     */
+    public function pageFormation(){
+        return $this->render("main/formation.html.twig");
     }
 }

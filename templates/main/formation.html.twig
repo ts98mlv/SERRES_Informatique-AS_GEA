@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <h1>La formation au DUT G.E.A en année spéciale</h1>
+
+    <section id="videoPresentation">
+        <h2>Vidéo de présentation</h2>
+        <video id="presentationGEA" controls>
+            <source src="{{ asset('/assets/video/presentation_as_gea.mp4') }}" type="video/mp4">
+        </video>
+    </section>
+
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('assets/style/css/formation.min.css') }}">
+{% endblock %}

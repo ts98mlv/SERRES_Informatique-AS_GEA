@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins";
+
+html, body{
+  background: white;
+}
+
+h1, h2{
+  letter-spacing: 2px;
+}
+
+h1{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  max-width: 90%;
+  font-family: $natureSpirit;
+  font-size: 36px;
+  text-shadow: 2px 4px $darkGrey;
+}
+
+section{
+  max-width: 90%;
+  margin : 0 auto;
+  clear: both;
+
+  h2{
+    color: $blue;
+    text-shadow: 1px 2px darken($blue, 20);
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+
+  video{
+    max-width: 100%;
+    height: auto;
+  }
+}
