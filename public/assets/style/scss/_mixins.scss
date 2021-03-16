@@ -121,3 +121,13 @@
     border-left: 1px solid darken($bg, 35);
   }
 }
+
+@mixin width($w : 0){
+  min-width: $w;
+  max-width: $w;
+}
+
+@mixin height($h : 0){
+  min-height: $h;
+  max-height: $h;
+}
