@@ -50,12 +50,33 @@ section{
     div.articleIllustration{
       @include width(65%);
       @include height(250px);
-      @include background_image_cover("../../img/logo_transparent.png");
       background-position: center;
       background-color: $darkGrey;
       position: relative;
       top: -125px;
       border-radius: 5px;
+
+      &#illustrationLogo{
+        @include background_image_cover("../../img/logo_transparent.png");
+        background-color: $darkGrey;
+      }
+
+      &#illustrationSalle{
+        @include background_image_cover("../../img/salle.jpg");
+        background-color: $darkGrey;
+        background-position: left;
+      }
+
+      &#illustrationDebouches{
+        @include background_image_cover("../../img/debouches.jpg");
+        background-color: $darkGrey;
+        background-position: left;
+      }
+
+      &#illustrationStudy{
+        @include background_image_cover("../../img/study.jpg");
+        background-color: $darkGrey;
+      }
     }
 
     div.texte{
