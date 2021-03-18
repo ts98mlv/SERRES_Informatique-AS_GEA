@@ -1,16 +1,25 @@
 @font-face {
-  src: url("../../fonts/wild Zova/Wild Zova Free.ttf") format("truetype"),
+  src:  local("Wild Zova Free"),
+        url("../../fonts/wild Zova/Wild Zova Free.ttf") format("truetype"),
         url("../../fonts/wild Zova/Wild Zova Free.otf") format("opentype");
   font-family: "Wild Zova";
 }
 
 @font-face {
-  src: url("../../fonts/NatureSpiritRegular.otf") format("opentype");
+  src: local("NatureSpiritRegular"),
+       url("../../fonts/NatureSpiritRegular.otf") format("opentype");
   font-family: "Nature Spirit";
+}
+
+@font-face {
+  src:  local("Mini Story"),
+        url("../../fonts/Mini Story Bold.ttf") format("truetype");
+  font-family: "Mini Story";
 }
 
 $wildZova : "Wild Zova" !default;
 $natureSpirit : "Nature Spirit" !default;
+$miniStory : "Mini Story" !default;
 
 // colors
 
@@ -21,10 +30,12 @@ $orange : #ffc744 !default;
 $corail : #fa7169 !default;
 $darkGrey : #40515b !default;
 $lightGrey: #f4f4f4 !default;
+$violet: rgba(207,103,240,1) !default;
 
 // gradients
 
 $violet_blue_gradient : linear-gradient(90deg, rgba(207,103,240,1) 0%, rgba(130,187,244,1) 100%);
+$blue_violet : linear-gradient(90deg, $blue 0%,  rgba(207,103,240,1) 100%);
 $orange_pink_gradient : linear-gradient(90deg, #f1d955 0%,#ff5dc3 100%);
 $violet_pink_gradient : linear-gradient(90deg, rgba(207,103,240,1) 0%, #ff5dc3 100%);
 $green_gradient : linear-gradient(90deg, #77fcab, #c4f188 100%);
