@@ -17,7 +17,6 @@ h1{
   max-width: 90%;
   font-family: $natureSpirit;
   font-size: 36px;
-  text-shadow: 2px 4px $darkGrey;
 }
 
 section{
@@ -180,6 +179,10 @@ section#testimonial{
 _____________________________________________________________________________________________________________________ */
 
 @media screen and (min-width: 1300px){
+  h1{
+    font-size: 42px;
+  }
+
   section{
     video{
       @include width(80%);
