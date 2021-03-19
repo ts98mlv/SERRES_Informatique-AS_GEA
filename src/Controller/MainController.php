@@ -52,4 +52,11 @@ class MainController extends AbstractController
     public function pageFormation(){
         return $this->render("main/formation.html.twig");
     }
+
+    /**
+     * @Route ("/mentionsLegales", name="mentionsLegales")
+     */
+    public function mentionsLegales(){
+        return $this->render("main/mentionsLegales.html.twig");
+    }
 }
