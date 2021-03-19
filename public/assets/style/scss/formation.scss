@@ -34,8 +34,10 @@ section{
   }
 
   video{
+    @include box-shadow(1px, 2px, 0px, $darkGrey);
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
   }
 
   article{
@@ -181,6 +183,7 @@ ________________________________________________________________________________
   section{
     video{
       @include width(80%);
+      @include box-shadow(3px, 3px, 5px, $darkGrey);
       margin: 0 15%;
     }
 
