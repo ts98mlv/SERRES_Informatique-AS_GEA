@@ -80,21 +80,23 @@
     <section id="testimonial">
         <h2>Témoignages d'étudiants d'année spéciale</h2>
         <div id="temoignages">
-            <btn class="btn_nav">
+            <btn class="btn_nav" id="btnLeft">
                 <span class="material-icons">
                     keyboard_arrow_left
                 </span>
             </btn>
-            <article class="temoignage">
-                <div class="articleIllustration" id="illustrationSalle"></div>
-                <div class="texte">
-                    <p>
-                        Suite à mon expérience professionnelle de plus de 10 ans en comptabilité, j’ai voulue faire une formation continue et j’ai choisi l’As Gea pour connaître le domaine des RH afin de compléter mon parcours et d’évoluer dans mon métier.
-                    </p>
-                    <strong>Abla, 34 ans</strong>
-                </div>
-            </article>
-            <btn class="btn_nav">
+            <div id="articlesTemoignage">
+                <article class="temoignage">
+                    <div class="articleIllustration" id="illustrationSalle"></div>
+                    <div class="texte">
+                        <p>
+                            Suite à mon expérience professionnelle de plus de 10 ans en comptabilité, j’ai voulue faire une formation continue et j’ai choisi l’As Gea pour connaître le domaine des RH afin de compléter mon parcours et d’évoluer dans mon métier.
+                        </p>
+                        <strong>Abla, 34 ans</strong>
+                    </div>
+                </article>
+            </div>
+            <btn class="btn_nav" id="btnRight">
                 <span class="material-icons">
                     keyboard_arrow_right
                 </span>
@@ -105,4 +107,9 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ asset('assets/style/css/formation.min.css') }}">
+{% endblock %}
+
+{%  block js %}
+    {{ parent() }}
+    <script src="{{ asset('assets/js/testimonial.js') }}"></script>
 {% endblock %}

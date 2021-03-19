@@ -140,6 +140,7 @@ section#testimonial{
 
       &:active, &:focus, &:hover{
         background: $violet;
+        cursor: pointer;
       }
 
       &:first-of-type{
@@ -163,6 +164,7 @@ section#testimonial{
         margin-top: 15px;
         font-family: $miniStory;
         font-size: 20px;
+        color : $blue;
       }
     }
   }
@@ -225,7 +227,6 @@ ________________________________________________________________________________
       }
 
       article.temoignage{
-        margin-left: 8%;
 
         strong{
           font-size: 28px;
