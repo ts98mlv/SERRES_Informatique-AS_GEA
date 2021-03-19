@@ -37,6 +37,13 @@ $(document).ready(() => {
                 "m’ayant pas convenu, je souhaitais me réorienter dans les métiers de la finance et de l’audit. J’ai " +
                 "choisi le DUT GEA AS pour accéder à une troisième année de licence générale en finance retourner en L1.",
             "author" : "Sahra, 23 ans"
+        },
+        {
+            "testimonial": "Après l'obtention d'une licence en langues étrangères, j'ai décidé de me réorienter dans le" +
+                " domaine de la gestion. J'ai découvert l'Année Spéciale GEA, et j'ai trouvé que c'était une belle " +
+                "opportunité pour acquérir une bonne formation sans avoir besoin de recommencer à zéro. De plus, les " +
+                "enseignements sont variés et donnent une bonne base générale pour les poursuites d'études.",
+            "author": "Maud, 23 ans"
         }
     ]
 
