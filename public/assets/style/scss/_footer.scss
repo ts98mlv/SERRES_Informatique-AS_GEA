@@ -5,6 +5,10 @@ footer{
   @include width(100%);
   display: block;
 
+  li, a, p, strong{
+    font-family: $natureSpirit;
+  }
+
   div#firstPart, div#secondPart{
     @include width(100%);
   }
@@ -81,14 +85,107 @@ footer{
     @include flex_center_vertically_horizontally;
     background-color: $darkGrey;
 
-    strong{
+    p{
       @include width(80%);
+      @include flex_column;
       color: $lightGrey;
       padding-top: 20px;
 
       a img{
         @include width(100%);
       }
+    }
+  }
+}
+
+
+/* _____________________________________________________________________________________________________________________
+
+                                                      media queries
+
+_____________________________________________________________________________________________________________________ */
+
+@media screen and (min-width: 1300px){
+  footer{
+    li, a, p, strong, li:after{
+      font-size: 24px;
+    }
+
+    li:after{
+      font-family: $natureSpirit;
+      font-size: 42px;
+    }
+
+    div#firstPart{
+      div#brand{
+        @include flex_center_vertically_horizontally;
+
+        img{
+          @include width(35%)
+        }
+
+        ul{
+          @include flex_center_vertically_horizontally;
+          flex-direction: row;
+
+          li{
+            margin-right: 15px;
+            list-style: none;
+
+            &:after{
+              content: ",";
+            }
+
+            &:last-of-type{
+              margin-right: 0;
+              &:after{
+                content: "";
+              }
+            }
+          }
+        }
+      }
+
+      nav ul{
+        @include flex_center_vertically_horizontally;
+        flex-direction: row;
+
+        li{
+          margin: 0;
+          margin-left: 45px;
+
+          &:first-of-type{
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    div#secondPart{
+      @include flex_center_vertically_horizontally;
+      p{
+        @include width(90% !important);
+        @include flex_center_vertically_horizontally;
+        flex-direction: row;
+        padding: 0;
+
+        img{
+          @include width(auto !important) ;
+        }
+
+        a{
+          @include width(10%);
+          margin-left: 25px;
+
+          &:hover, &:active, &:focus{
+            img{
+              background-color: $green;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+
     }
   }
 }
