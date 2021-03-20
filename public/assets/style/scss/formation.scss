@@ -133,7 +133,6 @@ section#testimonial{
       padding: 15px;
       border-radius: 50%;
       transition: all .3s cubic-bezier(0.310, -0.105, 0.430, 1.400);
-      margin-top: 160px;
 
       span{
         color: $lightGrey;
@@ -155,6 +154,8 @@ section#testimonial{
 
     article.temoignage{
       background: white;
+      @include width(auto);
+      margin: 0;
 
       p{
         color: $darkGrey;
@@ -166,6 +167,11 @@ section#testimonial{
         font-family: $miniStory;
         font-size: 20px;
         color : $blue;
+      }
+
+      div.texte{
+        margin-top: 0;
+        padding: 5px;
       }
     }
   }
@@ -233,9 +239,15 @@ ________________________________________________________________________________
       }
 
       article.temoignage{
+        @include height(250px);
+        max-width: 100%;
 
         strong{
           font-size: 28px;
+        }
+
+        div.texte{
+          margin: 0;
         }
       }
     }

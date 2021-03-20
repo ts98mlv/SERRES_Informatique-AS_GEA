@@ -75,7 +75,6 @@ $(document).ready(() => {
             let newArticle = $("<article></article>");
             let divTexte = $("<div></div>");
             newArticle.addClass("temoignage");
-            newArticle.append("<div class='articleIllustration' id='illustrationSalle'></div>")
             divTexte.addClass("texte");
             divTexte.append("<p>" + temoignages[index].testimonial + "</p>");
             divTexte.append("<strong>" + temoignages[index].author + "</strong>");
