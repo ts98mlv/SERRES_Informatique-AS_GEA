@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+
+footer{
+  @include width(100%);
+  display: block;
+
+  div#firstPart, div#secondPart{
+    @include width(100%);
+  }
+
+  div#firstPart{
+    @include flex_center_vertically_horizontally;
+    background-color: $blue;
+
+    li, p, a, span.material-icons{
+      color: $lightGrey;
+    }
+
+    strong{
+      color: $darkGrey;
+      text-align: center;
+    }
+
+    #brand{
+      @include width(45%);
+      @include flex_column;
+      margin-left: 5%;
+      align-items: flex-start;
+
+      img{
+        @include width(100%);
+      }
+
+      ul{
+        @include flex_column;
+        align-items: flex-start;
+        margin: 20px auto;
+        padding-left: 0;
+      }
+    }
+
+    nav{
+      @include width(45%);
+      margin-left: 5%;
+
+      ul{
+        margin-left: 0;
+        padding-left: 0;
+
+        li{
+          list-style: none;
+          margin-bottom: 15px;
+
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+
+          &:hover, &:active, &:focus{
+            a, a *{
+              color: $green !important;
+            }
+          }
+
+          a{
+            @include flex_center_vertically;
+            text-decoration: none;
+            color: $orange;
+
+            span.material-icons{
+              margin-right: 10px;
+              color: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div#secondPart{
+    @include flex_center_vertically_horizontally;
+    background-color: $darkGrey;
+
+    strong{
+      @include width(80%);
+      color: $lightGrey;
+      padding-top: 20px;
+
+      a img{
+        @include width(100%);
+      }
+    }
+  }
+}

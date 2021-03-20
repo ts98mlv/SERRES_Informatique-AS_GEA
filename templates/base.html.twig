@@ -66,6 +66,71 @@
             {% block body %}{% endblock %}
         </div>
 
+        <footer>
+            <div id="firstPart">
+                <div id="brand">
+                    <img src="{{ asset('assets/img/logo_transparent.png') }}" alt="Logo AS GEA">
+                    <strong>
+                        Projet tutoré "Promotion de l'année spéciale" 2020/2021
+                    </strong>
+                    <ul>
+                        <li>M. Quentin CHIARAMIDA</li>
+                        <li>M. Olivier FAUVET</li>
+                        <li>Mme Abla MAANE</li>
+                        <li>Mme Maud NICOLAY</li>
+                        <li>M. Alioune SANKARE</li>
+                    </ul>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="{{ path('HomePage') }}">
+                                <span class="material-icons">
+                                    home
+                                </span>
+                                accueil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('formation') }}">
+                                <span class="material-icons">
+                                    school
+                                </span>
+                                la formation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('Contact') }}">
+                                <span class="material-icons">
+                                    email
+                                </span>
+                                contact
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('mentionsLegales') }}">
+                            <span class="material-icons">
+                                policy
+                            </span>
+                                mentions légales
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="secondPart">
+                <strong>
+                    Site réalisé par dans le cadre d'un partenariat avec
+                    <a href="https://www.malt.fr/profile/thomasserres" target="_blank">
+                        <img src="{{ asset('assets/img/logo_serres_info.png') }}" alt="Logo du partenaire SERRES Informatique" id="logoSerresInfo">
+                    </a>
+                </strong>
+            </div>
+        </footer>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>    </body>
         <script src="{{ asset('assets/js/navbar.js') }}"></script>
         {% block js %}{% endblock %}
